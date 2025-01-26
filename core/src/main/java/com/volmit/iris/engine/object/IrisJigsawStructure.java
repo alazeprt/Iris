@@ -139,6 +139,14 @@ public class IrisJigsawStructure extends IrisRegistrant {
                     loadPiece(i, pools, pieces);
                 }
 
+                if (pieces.isEmpty()) {
+                    int max = 0;
+                    for (String i : getPieces()) {
+                        max = Math.max(max, getLoader().getJigsawPieceLoader().load(i).getMax2dDimension());
+                    }
+                    return max;
+                }
+
                 int avg = 0;
 
                 for (String i : pieces) {
