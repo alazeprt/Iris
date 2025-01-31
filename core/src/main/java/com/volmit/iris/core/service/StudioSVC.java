@@ -64,7 +64,7 @@ public class StudioSVC implements IrisService {
             if (!f.exists()) {
                 Iris.info("Downloading Default Pack " + pack);
                 if (pack.equals("overworld")) {
-                    String url = "https://ghproxy.net/https://github.com/IrisDimensions/overworld/releases/download/3910/overworld.zip";
+                    String url = "https://ghproxy.net/https://github.com/IrisDimensions/overworld/releases/download/31010/overworld.zip";
                     Iris.service(StudioSVC.class).downloadRelease(Iris.getSender(), url, false, false);
                 } else {
                     downloadSearch(Iris.getSender(), pack, false);
